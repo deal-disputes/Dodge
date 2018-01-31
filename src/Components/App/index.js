@@ -115,26 +115,4 @@ class App extends Component {
 }
 
 
-          // <PrivateRoute path="/community" user={user} component={DashBoard}/>
-          
-          
-// const ControlledDashBoard = ({component: Component, threads, ...rest}) => {
-//   return (
-//       <Route {...rest} render={(props) => threads ? 
-//         <Component threads={threads} {...props}/>
-//             :
-//           null }/>
-//           )
-//     }
-// const PrivateRoute = ({component: Component, user, ...rest}) => {
-//   return (
-//       <Route {...rest} 
-//           render={(props) => user !== null ? 
-//             <Component {...props}/>
-//             :
-//             <Redirect to={{pathname: '/login', state: {
-//               from: props.location
-//             }}}/>}/>
-//     )
-// }
 export default App;
