@@ -46,6 +46,7 @@ class App extends Component {
                     currentThreads.push({
                         post_title: snap.val().post_title,
                         post_content: snap.val().post_content,
+                        user_photoURL: snap.val().post_user_photoURL,
                         post_by: snap.val().post_by,
                         post_category: snap.val().post_category,
                         post_format_date: snap.val().post_format_date,

@@ -34,6 +34,7 @@ class RichEditor extends React.Component {
         const dateFormat = `${dateToday.toLocaleString(locale, {month: "long"})} ${dateToday.getDate()} ${dateToday.getFullYear()} ${dateToday.toLocaleTimeString()}`
         this.postStorage.push({
             post_by: this.userUID.displayName,
+            post_user_photoURL: this.userUID.photoURL,
             post_format_date: dateToday.toLocaleDateString(),
             post_date: dateToday.getTime(),
             post_title: title,

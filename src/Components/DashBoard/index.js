@@ -34,7 +34,7 @@ class DashBoard extends React.Component{
         const { match, user, threads, loading} = this.props;
         return (
                <div className="dashboard-main">
-                              { newPostInit && user ? 
+                              { newPostInit && user? 
                     <RichEditor/> :
                     null
                 }
@@ -74,7 +74,7 @@ class DashBoard extends React.Component{
 }
 
 const FetchThreads = ({threads, match, user}) => {
-     const fetchThreads = threads.length && user? threads.map(i => {
+     const fetchThreads = threads.length && user ? threads.map(i => {
             return (
                     <div className="bd-2">
                             <div className="board-title">
@@ -95,12 +95,12 @@ const FetchThreads = ({threads, match, user}) => {
                                         </li>
                                         <li> 
                                             <div className="thread-op-details">
-                                            
+                                                <img className="th-pic-30x30" src={i.user_photoURL} alt="user profile picture"/>
                                             </div>
                                         </li>
                                         <li>
                                             <div className="thread-comments-count">
-                                                <span>0 comments</span>
+                                                <span>0 response</span>
                                             </div>
                                         </li>
                                         <li>
