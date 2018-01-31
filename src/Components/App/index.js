@@ -53,7 +53,6 @@ class App extends Component {
   }
   
   setThreads = (threads) => {
-            console.log('1', threads)
        if(threads.length){
           this.setState({
             loading: false,
@@ -72,8 +71,6 @@ class App extends Component {
                 this.setState({
                   user: user
                 })
-                this.forceUpdate();
-                console.log('fucker')
             } else {
                 this.setState({
                   loading: false
