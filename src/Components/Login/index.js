@@ -8,10 +8,7 @@ class Login extends React.Component{
     componentWillMount(){
      this.authListener = auth.onAuthStateChanged(user => {
             if(user){
-                this.props.history.push({
-                    pathname: '/',
-                    code: 3000
-                });
+                this.props.history.goBack();
             } 
          })
     }
