@@ -1,0 +1,314 @@
+.champ-container{
+    display: inline-block;
+    max-width: 285px;
+    margin: 5px;
+    height: 160px;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: all 2s ease-in;
+    cursor: pointer;
+}
+.champ-icon-contain:hover{
+    opacity: 0;
+}
+.list-container{
+    background: rgb(0, 0, 0);
+}
+.list-wrapper{
+    max-width: 875px;
+    margin: 0 auto;
+    padding: 11px;
+    border-radius: 12px;
+    border: 1px solid rgba(128, 128, 128, 0.08);
+}
+
+.list-wrapper h1{
+    text-align: center;
+    color: #C4A961;
+    text-indent: 8px;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    font-weight: 100;
+    margin: 25px;
+    font-family: serif;
+    font-size: 19px;
+}
+
+.champions-container{
+    width: 105%;
+    background: black;
+}
+
+#loading-gif{
+    text-align: center;
+}
+.champ-icon-contain{
+    height: 70%;
+    background: rgba(0, 0, 0, 0.38);
+    -webkit-transition: opacity .4s ease;
+    -o-transition: opacity .4s ease;
+    transition: opacity .4s ease;
+    bottom: 0;
+    position: relative;
+    border-bottom: 2px solid rgba(211, 198, 165, 0.53);
+}
+.champion-icon{
+    background-size: contain;
+    width: 100%;
+    height: 60px;
+    background-position: center;
+    position: relative;
+    background-repeat: no-repeat;
+}
+
+
+
+/*---------------------------------*/
+
+/* Selected Champ */
+.champ-information{
+    position: absolute;
+    z-index: 12;
+    background: #000000;
+    width: 100%;
+    top: 0;
+}
+
+.champ-information h1{
+    color: wheat;
+}
+
+.fetch-error h1{
+    color: rgb(140, 103, 56);
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 195px 34px 30px 34px;
+}
+
+.champ-loader, .fetch-error{
+    position: absolute;
+    top: 0;
+    z-index: 12;
+    height: 100vh;
+    width: 100%;
+    background: black;
+}
+
+.champ-content{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(31, 30, 26, 0.5));
+    height: 100%;
+}
+.faction h3{
+    color: #D2C3A5;
+    text-transform: uppercase;
+    font-weight: 100;
+    text-align: right;
+    margin-right: 35px;
+    margin-top: 10px;
+}
+
+.champion-name{
+    padding: 20px;
+    text-align: center;
+}
+.champion-name .champion-max{
+    border-bottom: 1px solid #C4A961;
+}
+.champion-name h1{
+    font-size: 25px;
+    font-weight: 100;
+    color: #C4A961;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+
+.champion-title{
+    text-align: center;
+    margin: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing: 5px;
+}
+.champion-title h2{
+    color: #999385;
+}
+
+.champion-quote{
+    color: #C4A861;
+    margin: 95px;
+}
+.champion-quote h3{
+    font-size: 20px;
+    text-align: center;
+}
+
+.from-champion p{
+    text-align: right;
+}
+
+.champion-lore{
+padding: 10px;
+}
+.champ-details-wrapper{
+    background: rgba(17, 19, 24, 0.74);
+    border: 1px solid rgba(196, 152, 47, 0.16);
+    position: relative;
+    z-index: 2;
+}
+.champion-lore h3{
+    text-align: center;
+    color: #e1e2e2;
+    padding: 10px;
+}
+.champion-lore h5{
+    color: #D2C7A6;
+    font-weight: lighter;
+    font-size: 17px;
+    letter-spacing: 1px;
+    text-align: justify;
+    margin-bottom: 10px;
+    max-width: 610px;
+    margin: 0 auto;
+}
+.champion-lore h5::first-letter{
+    color: white;
+    font-size: 60px;
+    float: left;
+    border-bottom: 1px solid #c4a961;
+    margin-right: 25px;
+    margin-bottom: 11px;
+    font-family: serif;
+}
+.divider{
+    width: 0;
+    height: 0;
+    border-left: 320px solid transparent;
+    border-right: 320px solid transparent;
+    border-bottom: 2px solid #D3C6A5;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+
+.champ-splash-wrapper{
+    width: 100%;
+    height: 425px;
+    position: relative;
+}
+.champ-splash-wrapper video{
+    width: 100%;
+    position: absolute;
+    top: 10.25%;
+    left: 71.25%;
+    -webkit-transform: translate(-71.25%, -16.25%);
+    -ms-transform: translate(-71.25%, -16.25%);
+    transform: translate(-71.25%, -16.25%);
+    z-index: 1;
+}
+.champ-art{
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ahri_0.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 136%;
+}
+
+.navigator-champselect{
+    min-height: 45px;
+    background: rgba(33, 33, 33, 0.39);
+    position: fixed;
+    z-index: 12;
+    width: 10%;
+    text-align: left;
+}
+
+.navigator-champselect button{
+    padding: 15px;
+    background: transparent;
+    color: aliceblue;
+    border: 0;
+    outline:0;
+    cursor: pointer;
+}
+
+.read-more{
+    text-align: right;
+    padding: 10px;
+    max-width: 489px;
+    margin: 0 auto;
+}
+.read-more a{
+    font-style: italic;
+    text-decoration: underline;
+    color: #D2C6A4;
+}
+
+.related-champions{
+    position: fixed;
+    top: 100px;
+    height: 20%;
+    background: rgba(58, 58, 58, 0.35);
+    z-index: 13;
+    border-right: 1px solid #c4a961;
+    width: 100%;
+    transition: all 1s cubic-bezier(0.42, 0, 0, 0.99);
+}
+
+.toggler{
+    position: relative;
+    width: 50px;
+    background: rgba(58, 58, 58, 0.43);
+}
+
+.related-champ-wrapper{
+    width: 100%;
+    height: 100%;
+}
+.related-champ{
+    width: 100%;
+    float: left;
+    height: 100%;
+    position: absolute;
+}
+
+.champion-container{
+    width: 130px;
+    height: 100px;
+    display: inline-block;
+}
+.champion{
+    width: 90px;
+    height: 90px;
+    margin-left: 20px;
+    cursor: pointer;
+    transition: all .5s cubic-bezier(0.42, 0, 0.24, 0.68);
+}
+.champion:hover{
+    width: 100px;
+    height: 100px;
+}
+.champion div{
+    border: 1px solid white;
+    border-radius: 100%;
+    background-size: cover;
+    width: 100%;
+    background-repeat: no-repeat;
+    height: 100%;
+    background-position: right;
+}
+
+.champions-wrapper{
+    padding: 29px;
+    padding-left: 60px;
+}
+
+.toggler span{
+    font-size: 10px;
+    color: #ffffff;
+    float: right;
+    position: relative;
+    padding: 10px;
+    cursor: pointer;
+}

@@ -1,0 +1,27 @@
+
+
+
+#body h1{
+     font-size: 50px;
+    color: #ffffff;
+    margin: 50px;   
+}
+#body{
+    z-index: 12;
+    background-image: url("./Blast-Zone-Heimerdinger-Splash-Art-Update-League-of-Legends-Artwork-Wallpaper-lol-1024x605.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    overflow: hidden;
+        position: relative;
+}
+
+#body button{
+    border: 0;
+    padding: 10px;
+    margin: 44px;
+    background: #c55c02;
+    color: #ffffff;
+    font-weight: bold;
+}

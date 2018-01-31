@@ -1,0 +1,39 @@
+
+
+
+.community-posts-container{
+    margin-top: 40px;
+    max-width: 880px;
+    padding: 10px;
+}
+
+.title-wrapper{
+    background: white;
+    padding: 10px;
+    width: 100%;
+}
+
+.large-container{
+        float: left;
+}
+
+.large-post{
+    max-width: 570px;
+    background: grey;
+    max-height: 284px;
+    height: 284px;
+    width: 570px;
+}
+
+
+.small-container{
+    float: right;
+}
+
+.small-post{
+    max-width: 305px;
+    min-height: 70px;
+    background: grey;
+    width: 305px;
+    margin: 1px;
+}

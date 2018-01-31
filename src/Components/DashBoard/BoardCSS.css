@@ -1,0 +1,95 @@
+.dashboard-main .boards{
+    max-width: 810px;
+    margin: 0 auto;
+    margin-top: 130px;
+}
+
+.main-board-title{
+    color: #ffffff;
+    text-shadow: -1px 1px 1px black;
+}
+
+.board-cat{
+    padding: 10px;
+}
+.boards .main-board-wrapper, .boards .latests-threads{
+    background: #7A77FF;
+    padding: 10px;
+    margin: 10px;
+}
+
+.main-board-wrapper ul {
+    width: 100%;
+}
+
+.main-board-wrapper ul li{
+    display: inline-block;
+    color: #ffffff;
+    padding: 5px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-right: 1px solid;
+    cursor: pointer;
+}
+
+.main-board-wrapper ul li:hover{
+    text-decoration: underline;
+}
+
+
+.latests-threads .bd-2{
+    background: white;
+    padding: 10px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.28);
+}
+
+.board-details{
+        padding: 5px;
+}
+.board-details .reactions-container{
+    float: left;
+}
+
+.board-details .board-hints{
+    float: right;
+}
+
+.board-hints li{
+    display: inline-block;
+    margin-left: 10px;
+    color: rgba(128, 128, 128, 0.91);
+    font-size: 11px;
+}
+
+.controls-main{
+    padding: 10px;
+    padding-bottom: 0;
+}
+
+.new-post-btn button{
+    border: 0;
+    padding: 5px;
+    background: #41404d;
+    color: #ffffff;
+    outline-color: transparent;
+    cursor: pointer;
+}
+
+.thread-op-details span img{
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+    vertical-align: middle;
+    margin: 5px;
+}
+
+.board-title a{
+    text-decoration: none;
+}
+.board-title a:hover{
+    text-decoration: underline;
+}
+
+.board-title{
+    max-width: 250px;
+}

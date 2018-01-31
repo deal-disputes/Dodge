@@ -1,0 +1,124 @@
+
+
+.login-wrapper{
+    max-width: 500px;
+    position: absolute;
+    right: 0;
+    background: white;
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    border-bottom-left-radius: 10px;
+}
+
+h1{
+    font-size: 20px;
+    margin: 5px;
+}
+
+.login-wrapper form{
+    max-width: 280px;
+    float: left;
+}
+
+input[type="text"], input[type="password"]{
+    background: #353535;
+    border: 0;
+    outline: 0;
+    padding: 10px;
+    border-radius: 20px;
+    margin: 5px;
+    color: white;
+    text-indent: 10px;
+    font-variant: all-petite-caps;
+    width: 71%;
+}
+
+input::-webkit-input-placeholder {
+color: white !important;
+}
+ 
+input:-moz-placeholder { /* Firefox 18- */
+color: white !important;
+}
+ 
+input::-moz-placeholder {  /* Firefox 19+ */
+color: white !important;
+}
+ 
+input:-ms-input-placeholder {  
+color: white !important;
+}
+
+.sign-up-wrapper{
+    float: right;
+}
+
+.sign-up-content{
+    text-align: center;
+    margin: 33px;
+}
+
+.sign-up-texts{
+    font-size: 14px;
+}
+
+.sign-up-texts h3{
+    margin: 5px;
+}
+.sign-up-content button{
+    width: 100%;
+    margin-top: 10px;
+}
+.clear-both{
+    clear: both;
+}
+
+.middle-row{
+    margin: 15px;
+    max-width: 200px;
+    margin-top: 0;
+}
+
+.middle-row a{
+    font-size: 13px;
+    float: left;
+}
+
+.middle-row button, .sign-up-content button{
+    padding: 10px;
+    border: 0;
+    background: #7770FF;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.middle-row button{
+    float: right;
+}
+
+.bottom-row-content h3{
+    margin: 5px;
+    font-size: 13px;
+}
+.provider-btn-wrapper{
+    display: inline-block;
+    margin: 5px;
+}
+
+.provider-btn-wrapper button{
+    border: 0;
+    padding: 10px;
+    color: #ffffff;
+    width: 80px;
+    height: 35px;
+}
+
+#google{
+    background-color: #D84132;
+}
+#twitter{
+    background-color: #3DB8FA;
+}
+#facebook{
+    background-color: #3F58A4;
+}

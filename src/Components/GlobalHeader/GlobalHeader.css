@@ -1,0 +1,135 @@
+
+
+.announcement{
+padding: 10px;
+    background: #0a0a0a;
+    text-align: center;
+    color: rgba(253, 235, 208, 0.89);
+}
+
+.announcement h1{
+    margin: 0;
+}
+
+.global-header{
+    background-color: #536de2;
+    min-height: 250px;
+    color: #ffffff;
+    width: 100%;
+    
+}
+
+.global-header .logo{
+    max-width: 400px;
+    padding: 94px;
+    position: relative;
+    float: left;
+    z-index: 2;
+    text-shadow: -1px 0px 20px #000000;
+}
+
+.global-header .logo a{
+    text-decoration: none;
+}
+.global-header .logo h1{
+    font-family: cursive;
+    color: #f4f3ff;
+    font-size: 60px;
+    background: rgba(0, 0, 0, 0.56);
+    cursor: pointer;
+}
+
+.global-header .slider-box .slider-contents .slide{
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+    box-shadow: inset -2px 2px 20px 7px #0a0a0a;
+}
+
+.slider-box{
+    position: relative;
+    z-index: 1;
+}
+.navigator{
+    min-height: 45px;
+    text-align: center;
+    background: #5f59da;
+}
+.navigator .nav-circle{
+    width: 16px;
+    height: 16px;
+    background: #9d9ade;
+    border-radius: 100px;
+    display: inline-block;
+    margin: 5px;
+    transition: background-color 0.6s ease;
+}
+
+.active{
+    background: #ffffff !important;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
+.artist{
+    position: relative;
+    height: 100%;
+}
+
+.artist-profile{
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    text-align: center;
+}
+.artist-profile a{
+    color: #CAAB67;
+    font-weight: bold;
+}
+
+.nav-wrapper{
+    padding: 13px;
+        text-align: left;
+}
+
+.nav-link{
+    display: inline;
+    margin: 20px;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
+.nav-link:hover{
+    background:black;
+}
+.nav-link a{
+    padding: 5px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.logout{
+        border: 0;
+    background: rgba(95, 89, 218, 0);
+    padding: 5px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 16px;
+}
