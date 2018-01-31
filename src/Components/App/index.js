@@ -27,14 +27,13 @@ class App extends Component {
   }
   
   componentDidMount(){
-      this.getThreads();
   }
   
   
-  getThreads = async() => {
+  getThreads = (user) => {
     this.postStorage = firebase.database().ref("forum-posts");
     const currentThreads  = this.state.threads;
-    try {
+    console.log('Invoked getThreads')
     this.postStorage.on("child_added", snap => {
                     currentThreads.push({
                         post_title: snap.val().post_title,
@@ -44,13 +43,16 @@ class App extends Component {
                         post_format_date: snap.val().post_format_date,
                         post_snap_key: snap.key
                     })
-                    this.setThreads(currentThreads);
-            })
+                    this.setState({
+                        user: user,
+                        threads: currentThreads,
+                        loading: false
+                    })
+                  console.log('getThreads: Threads successfully fetch')
+          })
             
-      } catch (e) {
-         console.log(e)
       }
-  }
+  
   
   setThreads = (threads) => {
        if(threads.length){
@@ -64,22 +66,18 @@ class App extends Component {
   
   
 
-  async checkAuth(){
-    await auth.onAuthStateChanged(user => {
-      try {
+  checkAuth(threads){
+    auth.onAuthStateChanged(user => {
             if(user){
-                this.setState({
-                  user: user
-                })
+            console.log('User authenticated: Fetch Threads')
+              this.getThreads(user)
             } else {
                 this.setState({
-                  loading: false
+                  loading: false,
+                  threads: []
                 })
-            }
-            
-        }catch(e){
-            console.log(e)
-        }
+              console.log('User not authenticated: Dont show threads')
+            } 
     })  
 }
   
