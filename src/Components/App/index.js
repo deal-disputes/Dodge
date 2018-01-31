@@ -18,6 +18,7 @@ class App extends Component {
       threads: [],
       letShowGlobalHeader: true,
     }
+    this.postStorage = firebase.database().ref("forum-posts");
     this.checkAuth = this.checkAuth.bind(this);
   }
   
@@ -27,11 +28,18 @@ class App extends Component {
   }
   
   componentDidMount(){
+    this.postStorage.on('value', snap => {
+      console.log('Oops, theres no existing data');
+          if(snap.val() === null) {
+            this.setState({
+              loading: false
+            })
+          }
+    })
   }
   
   
   getThreads = (user) => {
-    this.postStorage = firebase.database().ref("forum-posts");
     const currentThreads  = this.state.threads;
     console.log('Invoked getThreads')
     this.postStorage.on("child_added", snap => {
@@ -44,13 +52,11 @@ class App extends Component {
                         post_snap_key: snap.key
                     })
                     this.setState({
-                        user: user,
                         threads: currentThreads,
                         loading: false
                     })
-                  console.log('getThreads: Threads successfully fetch')
+              console.log('getThreads: Threads successfully fetch')
           })
-            
       }
   
   
@@ -71,6 +77,9 @@ class App extends Component {
             if(user){
             console.log('User authenticated: Fetch Threads')
               this.getThreads(user)
+              this.setState({
+                user: user
+              })
             } else {
                 this.setState({
                   loading: false,
