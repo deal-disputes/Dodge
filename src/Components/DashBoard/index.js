@@ -9,40 +9,46 @@ class DashBoard extends React.Component{
     constructor(){
         super()
         this.state = {
-            newPostInit: false
+           errors: {
+               text: null
+           },
+           errorVisible: false
+            
         }
     }
 
     
     toggleEditor = () => {
-        const { newPostInit } = this.state;
-        const { user } = this.props;
-        const bool = newPostInit ? true : false;
-        if(!bool && user){
-            this.setState({
-                newPostInit: true
+        const { user, match , history } = this.props;
+        if(user){
+            this.props.history.push({
+                pathname: `/thread/create/new`
             })
         } else {
             this.setState({
-                newPostInit: false
+                errors: {
+                    text: 'You need to be logged in to create a thread'
+                },
+                errorVisible: true
             })
         }
     }
     
     render(){
-        const { newPostInit } = this.state;
         const { match, user, threads, loading} = this.props;
+        const { errorVisible, errors  } = this.state;
         return (
                <div className="dashboard-main">
-                              { newPostInit && user? 
-                    <RichEditor/> :
-                    null
-                }
                 <div className="boards">
                     <div className="dashboard-controls">
                         <div className="controls-main">
                             <div className="new-post-btn">
                                 <button onClick={this.toggleEditor}> Write new </button>
+                                { errorVisible ? 
+                                        <span id="error"> {errors.text} </span>
+                                        :
+                                        null
+                                }
                             </div>
                         </div>
                    </div>

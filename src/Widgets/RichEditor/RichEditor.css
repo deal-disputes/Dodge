@@ -2,3 +2,70 @@
     position: absolute;
   left: -9999px;
 }
+
+.editor-container{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 12;
+    background: rgb(41, 39, 39);
+    height: 100%;
+}
+
+.editor-wrapper{
+    margin: 25px;
+    margin-top: 100px;
+}
+
+.editor-title input[type="text"]{
+    background: #ffffff;
+    border: 0;
+    outline: 0;
+    padding: 10px;
+    border-radius: 20px;
+    margin: 5px;
+    color: black;
+    text-indent: 10px;
+    font-variant: all-petite-caps;
+    width: 80%;
+}
+
+.category-picker{
+    margin: 25px;
+}
+.category-picker ul{
+    display: inline-block;
+    color: #ffffff;
+    text-shadow: -1px 1px 8px black;
+}
+.category-picker li{
+    display: inline-block;
+    padding: 10px;
+    background: #5f59da;
+    margin-right: 10px;
+}
+
+.editor-rich-textarea{
+    background: white;
+    min-height: 320px;
+}
+
+.quill{
+    height: 100%;
+}
+
+.submit{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.submit button{
+    border: 0;
+    padding: 15px;
+    width: 130px;
+    background: #5f59da;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+    outline-color: transparent;
+}

@@ -3,6 +3,8 @@ import firebase, { auth } from '../../Components/Constants/database.js';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import './RichEditor.css';
+
+
 class RichEditor extends React.Component {
     constructor(){
         super();
@@ -40,9 +42,13 @@ class RichEditor extends React.Component {
             post_title: title,
             post_content: text,
             post_category: cat,
+        }).then(snap => {
+        
         })
     }
     
+    
+
     render(){
         return(
             <div className="editor-container">
@@ -70,10 +76,10 @@ class RichEditor extends React.Component {
                         <div className="editor-rich-textarea">
                         <ReactQuill name="editor" value={this.state.text}
                                 onChange={this.handleChange} />
-                            <div className="submit">
+                        </div>
+                        <div className="submit">
                                 <button> complete </button>
                             </div>
-                        </div>
                         </form>
                     </div>
                 </div>
