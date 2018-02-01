@@ -43,7 +43,8 @@ class RichEditor extends React.Component {
             post_content: text,
             post_category: cat,
         }).then(snap => {
-        
+            const { match , history } = this.props;
+            history.goBack();
         })
     }
     
