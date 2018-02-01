@@ -116,7 +116,7 @@ class App extends Component {
           <Route path="/champions" exact render={(props) => <ChampionsList {...props}/>}/>
           <Route path="/champions/select/:champName" render={(props) => <SelectedChamp {...props}/>}/>
           <Route path="/community" exact render={(props) => <DashBoard threads={threads} loading={loading} user={user} {...props}/>}/>
-          <Route path="/community/thread/:thread" render={(props) => <SelectedThread {...props}/>}/>
+          <Route path="/community/thread/:thread" render={(props) => <SelectedThread datatoQuery={threads} {...props}/>}/>
           <Route path="*" render={(props) => <RouteNotFound {...props} toggleGlobalHeader={this.hideGlobalHeader}/>} />
         </Switch>
       </div>
