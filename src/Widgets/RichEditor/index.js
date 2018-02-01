@@ -14,21 +14,24 @@ class RichEditor extends React.Component {
         this.state = { 
             text: '' ,
         } // You can also pass a Quill Delta here
-        
     }
 
-
+    componentDidMount(){
+        this.checkActiveInput();
+    }
+    
     handleChange = (value) => {
       this.setState({ text: value })
       
      }
-
+    
     
      submitNewThread = (e) => {
         e.preventDefault();
         const week = ['Saturday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
         const { text } = this.state;
-        const cat = document.querySelector('input[name="match"]:checked').value;
+        const cat = document.querySelector('input[name="match"]:checked');
+        const catID = cat.id;
         const title = e.target.title.value
         const content = text;
         const dateToday = new Date(),
@@ -41,7 +44,7 @@ class RichEditor extends React.Component {
             post_date: dateToday.getTime(),
             post_title: title,
             post_content: text,
-            post_category: cat,
+            post_category: cat.value,
         }).then(snap => {
             const { match , history } = this.props;
             history.goBack();
@@ -49,12 +52,25 @@ class RichEditor extends React.Component {
     }
     
     
+    checkActiveInput = () =>{
+        const radios = document.threadForm.match;
+        let prevValue = null;
+        for(var i=0; i < radios.length; i++){
+            radios[i].addEventListener('change', function(){ 
+                document.getElementById(this.id).parentElement.className = 'selected';
+                if(prevValue !== null){
+                    prevValue.className = '';
+                }
+                prevValue = this.parentElement;
+            })
+        }
+    }
 
     render(){
         return(
             <div className="editor-container">
                     <div className="editor-wrapper">
-                    <form onSubmit={this.submitNewThread}>
+                    <form onSubmit={this.submitNewThread} name="threadForm">
                         <div className="editor-title">
                             <input ref={(input) => this.post_title = input} type="text" name="title" id="post-title" placeholder="New post title"/>
                         </div>

@@ -43,11 +43,20 @@
     padding: 10px;
     background: #5f59da;
     margin-right: 10px;
+
+}
+.category-picker li:hover{
+
+    background: #6c68ce;
+
+}
+
+.selected{
+    background: #8582e0 !important;
 }
 
 .editor-rich-textarea{
     background: white;
-    min-height: 320px;
 }
 
 .quill{
@@ -68,4 +77,20 @@
     font-size: 15px;
     font-weight: 700;
     outline-color: transparent;
+}
+
+.editor-title input::-webkit-input-placeholder {
+color: black !important;
+}
+ 
+.editor-title input:-moz-placeholder { /* Firefox 18- */
+color: black !important;
+}
+ 
+.editor-title input::-moz-placeholder {  /* Firefox 19+ */
+color: black !important;
+}
+ 
+.editor-title input:-ms-input-placeholder {  
+color: black !important; 
 }
