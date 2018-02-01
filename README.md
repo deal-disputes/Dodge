@@ -1,5 +1,6 @@
 
-Serverless League of Legends PH community website currently being build with React , Firebase and Redux
+
+#### Serverless League of Legends PH community website currently being build with React , Firebase and Redux
 
 Current Progress: https://dodge-950cd.firebaseapp.com/
 
