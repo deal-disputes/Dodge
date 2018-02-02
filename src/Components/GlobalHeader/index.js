@@ -3,7 +3,6 @@ import './GlobalHeader.css';
 import firebase , { auth } from '../Constants/database';
 import { Link } from 'react-router-dom';
 
-// Temporary local , will be fetch with loopback in mid production
 const ARTS = [
     {
         key: 1,

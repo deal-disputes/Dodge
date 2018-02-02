@@ -19,9 +19,9 @@ class DashBoard extends React.Component{
 
     
     toggleEditor = () => {
-        const { user, match , history } = this.props;
+        const { user, history } = this.props;
         if(user){
-            this.props.history.push({
+            history.push({
                 pathname: `/thread/create/new`
             })
         } else {
