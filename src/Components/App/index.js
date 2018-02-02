@@ -8,7 +8,7 @@ import DashBoard from '../DashBoard';
 import RouteNotFound from '../404';
 import ChampionsList from '../Champions/ChampionsList'
 import SelectedChamp from '../Champions/SelectedChamp'
-import SelectedThread from '../SelectedThread/SelectedThread';
+import ThreadContainer from '../ThreadContainer';
 import RichEditor from '../../Widgets/RichEditor';
 
 class App extends Component {
@@ -118,7 +118,7 @@ class App extends Component {
           <Route path="/champions" exact render={(props) => <ChampionsList {...props}/>}/>
           <Route path="/champions/select/:champName" render={(props) => <SelectedChamp {...props}/>}/>
           <Route path="/community" exact render={(props) => <DashBoard threads={threads} loading={loading} user={user} {...props}/>}/>
-          <Route path="/community/thread/:thread" render={(props) => <SelectedThread datatoQuery={threads} {...props}/>}/>
+          <Route path="/community/thread/:thread" render={(props) => <ThreadContainer datatoQuery={threads} {...props}/>}/>
           <ProtectThread user={user} path='/thread/create/new' component = {RichEditor} />
           <Route path="*" render={(props) => <RouteNotFound {...props} toggleGlobalHeader={this.hideGlobalHeader}/>} />
         </Switch>

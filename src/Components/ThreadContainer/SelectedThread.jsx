@@ -1,41 +1,10 @@
 import React from 'react';
 import Loading from '../../Widgets/Loader';
-import './SelectedThread.css';
 
 
 
-class SelectedThread extends React.Component{
-    constructor(props){
-        super(props);
-        
-        this.state = {
-            selection: null,
-        }
-    }
-    
-    componentWillMount(){
-        const { match } = this.props;
-        this.setState({
-            selection: match.params.thread
-        })
-    }
-    
-    render(){
-        // const { datatoQuery } = this.props;
-        const { selection } = this.state;
-        const { datatoQuery } = this.props;
-        return(
-                <div>
-                    <FindSelection datatoQuery={datatoQuery} selection={selection}/>
-                </div>
-            )
-    }
-}
-
-
-const FindSelection = ({datatoQuery, selection}) => {
+const SelectedThread = ({datatoQuery, selection}) => {
     let selectedData = datatoQuery.find(i => i.post_snap_key === selection);
-    console.log(selectedData)
     return(
         <div>
         { selectedData !== undefined ?
@@ -59,4 +28,6 @@ const FindSelection = ({datatoQuery, selection}) => {
         </div>
         )
 }
+
+
 export default SelectedThread;
