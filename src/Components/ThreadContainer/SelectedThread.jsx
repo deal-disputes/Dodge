@@ -22,6 +22,9 @@ const SelectedThread = ({datatoQuery, selection}) => {
                            on {selectedData.post_format_date} </p>
                         </div>
                     </div>
+                    <div className="thread-contents" dangerouslySetInnerHTML={{ __html: selectedData.post_content }}>
+                        
+                    </div>
                 </div>
             </div>
          : <Loading/> }

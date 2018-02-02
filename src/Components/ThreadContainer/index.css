@@ -1,5 +1,6 @@
 .thread-container{
     margin-top: 60px;
+    margin-bottom: 60px;
 }
 
 .thread-starter{
@@ -9,26 +10,31 @@
 }
 
 .cn-bg-1{
-    max-width: 700px;
+    box-shadow: 0px 2px 4px 0px #adacac;
+    max-width: 900px;
     margin: 0 auto;
+    background: #ffffff;
+    padding: 20PX;
+    border-bottom: 1px solid grey;
 }
 
 .photo-url{
     float: left;
-    width: 78px;
+    width: 55px;
     margin-right: 20px;
 }
 
 .photo-url img{
     width: 100%;
     border-radius: 100px;
-    margin-top: 13px;
+    margin-top: 30px;
 }
 
 .thread-details{
     padding: 25px;
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid #d6d6d6;
     margin: 0 auto;
+    margin-bottom: 50px;
 }
 
 .thread-title{
@@ -38,9 +44,35 @@
 
 .thread-title h1{
     margin: 0;
-    font-size: 25px;
+    font-size: 35px;
 }
 
 .info-thread p{
     color: #9c9c9c;
+}
+
+.thread-contents{
+    margin: 30px;
+}
+
+.thread-contents h1{
+    margin: 0;
+    font-size: 2em;
+}
+
+.thread-contents h2{
+    font-size: 1.5em;
+}
+
+.thread-contents h3{
+    font-size: 1.17em;
+}
+
+.thread-contents ol, .thread-contents li, .thread-contents ul{
+    padding-left: 1.5em;
+    margin-bottom: 10px;
+}
+
+.thread-contents p {
+        line-height: 24px;
 }
