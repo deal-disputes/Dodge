@@ -13,7 +13,6 @@ class DashBoard extends React.Component{
                text: null
            },
            errorVisible: false
-            
         }
     }
 
@@ -34,9 +33,11 @@ class DashBoard extends React.Component{
         }
     }
     
+    
+    
     render(){
         const { match, user, threads, loading} = this.props;
-        const { errorVisible, errors  } = this.state;
+        const { errorVisible, errors} = this.state;
         return (
                <div className="dashboard-main">
                 <div className="boards">

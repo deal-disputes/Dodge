@@ -52,7 +52,8 @@ class App extends Component {
                         post_by: snap.val().post_by,
                         post_category: snap.val().post_category,
                         post_format_date: snap.val().post_format_date,
-                        post_snap_key: snap.key
+                        post_snap_key: snap.key,
+                        reactions: snap.val().reactions
                     })
                     this.setState({
                         threads: currentThreads,
