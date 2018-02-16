@@ -3,8 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "draft-js": "^0.10.5",
-    "draft-js-export-html": "^1.2.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-quill": "^1.2.2",
@@ -16,5 +14,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "firebase-tools": "^3.17.4"
   }
 }

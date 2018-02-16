@@ -8,6 +8,7 @@ class AdminPanel extends React.Component{
     constructor(props){
         super(props)
         this.AdminBoardRef = firebase.database().ref('admin-features');
+    
     }
 
     Announce = () => {
