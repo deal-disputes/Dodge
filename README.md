@@ -15,8 +15,9 @@ Current Progress Demo: https://dodge-950cd.firebaseapp.com/
 
 #### Setting config
 
-1. Create an `.env` file on the root level of this project 
+1. Create an `.env` file at the root directory
 2. Inside the `.env` file define the following environment variables
+
     ```
     REACT_APP_FIREBASE_APIKEY= ,
     REACT_APP_FIREBASE_AUTHDOMAIN=,
@@ -25,12 +26,12 @@ Current Progress Demo: https://dodge-950cd.firebaseapp.com/
     REACT_APP_FIREBASE_BUCKET=,
     REACT_APP_FIREBASE_MSGSENDERID=
     ```
-3. Go to firebase console `https://firebase.google.com/` and copy and paste each of your config in the environment variables defined inside the `.env`
+3. Go to firebase console `https://firebase.google.com/` copy and paste each of your config in the environment variables defined inside the `.env`
 
 #### Installation
 
 1. Run `npm install` and `npm run build`
-2. Run `npm start` 
+2. Run `npm start` to run locally
 
 #### Deploy to firebase hosting
 
