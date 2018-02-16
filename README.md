@@ -17,13 +17,14 @@ Current Progress Demo: https://dodge-950cd.firebaseapp.com/
 
 1. Create an `.env` file on the root level of this project 
 2. Inside the `.env` file define the following environment variables
+    ```
     REACT_APP_FIREBASE_APIKEY= ,
     REACT_APP_FIREBASE_AUTHDOMAIN=,
     REACT_APP_FIREBASE_DATABASEURL=
     REACT_APP_FIREBASE_PROJECTID=,
     REACT_APP_FIREBASE_BUCKET=,
     REACT_APP_FIREBASE_MSGSENDERID=
-
+    ```
 3. Go to firebase console `https://firebase.google.com/` and copy and paste each of your config in the environment variables defined inside the `.env`
 
 #### Installation
