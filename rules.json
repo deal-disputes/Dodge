@@ -3,7 +3,7 @@
     "users": {
        "$uid": {
          ".read": "$uid === auth.uid",
-         ".write": "auth !== null && $uid === auth.uid && data.exists()"
+         ".write": "$uid === auth.uid && !data.exists()",
        }
     },
     "admin-features": {
@@ -16,6 +16,6 @@
        ".read": "auth !== null",
        ".write": "$uid === auth.uid"
       }
-    }
+    },
   }
 }
