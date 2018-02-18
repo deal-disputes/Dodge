@@ -55,7 +55,7 @@ class FrontPage extends React.Component {
                 });
                 } else {
                 this.setState({
-                    front: <AdminPanel/>
+                    front: null
                 });  
             }
         });
