@@ -32,6 +32,7 @@ class App extends Component {
   componentDidMount(){
     this.postStorage.on('value', snap => {
       console.log('Oops, theres no existing data');
+      console.log(snap.val())
           if(snap.val() === null) {
             this.setState({
               loading: false

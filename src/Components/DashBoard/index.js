@@ -26,7 +26,7 @@ class DashBoard extends React.Component{
         } else {
             this.setState({
                 errors: {
-                    text: 'You need to be logged in to create a thread'
+                    text: 'You need to log in to create a new thread'
                 },
                 errorVisible: true
             })

@@ -11,6 +11,7 @@
       ".write": "auth !== null && root.child('users').child(auth.uid).child('role').val() == 'Admin'"
     },
     "forum-posts": {
+      ".read": "auth !== null",
       "$uid": {
        ".read": "auth !== null",
        ".write": "$uid === auth.uid"
