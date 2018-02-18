@@ -13,7 +13,7 @@ class Login extends React.Component{
     componentWillMount(){
      this.authListener = auth.onAuthStateChanged(user => {
             if(user){
-              this.usersPath.child(user.uid).push({
+              this.usersPath.child(user.uid).set({
                   email: user.email,
                   role: 'Member'
               })
