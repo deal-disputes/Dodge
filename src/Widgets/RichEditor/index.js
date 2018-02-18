@@ -8,7 +8,7 @@ import './RichEditor.css';
 class RichEditor extends React.Component {
     constructor(){
         super();
-        this.userUID = auth.currentUser;
+        this.user = auth.currentUser;
         this.postStorage = firebase.database().ref("forum-posts");
         this.state = { 
             text: '' ,
@@ -30,19 +30,20 @@ class RichEditor extends React.Component {
         let { text } = this.state;
         let title = e.target.title.value
         let content = text;
+        const UID = this.user.uid;
         const WEKK = ['Saturday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
         const CATEGORY = document.querySelector('input[name="match"]:checked');
         const CATEGORY_ID = CATEGORY.id;
         const DATE_TODAY = new Date(),
         locale = 'en-us'
-        this.postStorage.child(this.userUID).set({
-            post_by: this.userUID.displayName,
-            post_user_photoURL: this.userUID.photoURL,
-            post_format_date: DATE_TODAY.toLocaleDateString(),
-            post_date: DATE_TODAY.getTime(),
-            post_title: title,
-            post_content: text,
-            post_category: CATEGORY.value,
+        this.postStorage.child(UID).set({
+                    post_by: this.user.displayName,
+                    post_user_photoURL: this.user.photoURL,
+                    post_format_date: DATE_TODAY.toLocaleDateString(),
+                    post_date: DATE_TODAY.getTime(),
+                    post_title: title,
+                    post_content: text,
+                    post_category: CATEGORY.value,
         }).then(snap => {
             const { match , history } = this.props;
             history.goBack();

@@ -45,6 +45,7 @@ class App extends Component {
     const currentThreads  = this.state.threads;
     console.log('Invoked getThreads')
     this.postStorage.on("child_added", snap => {
+      console.log(snap.key);
                     currentThreads.push({
                         post_title: snap.val().post_title,
                         post_content: snap.val().post_content,

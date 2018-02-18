@@ -16,7 +16,7 @@ class FrontPage extends React.Component {
     componentDidMount(){
       this.authListener = auth.onAuthStateChanged((user) =>{
                 if(user){
-                    this.validateAccount(user);
+                    this.getRole(user.uid);
                 }
             });
         }
@@ -33,22 +33,9 @@ class FrontPage extends React.Component {
         } 
     }
     
-
-    validateAccount = (userObj) => {
-            this.userRef.once('value').then(snap => {
-                if(snap.hasChild(userObj.uid)){
-                    this.getRole(userObj);
-                } else {
-                    this.userRef.child(userObj.uid).push({
-                        email: userObj.email,
-                        role: 'Member'
-                    });
-                }
-            });
-    }
     
-    getRole = (userObj) => {
-        this.userRef.child(userObj.uid).once('child_added', snap => {
+    getRole = (UID) => {
+        this.userRef.child(UID).once('value', snap => {
             if(snap.val().role == 'Admin'){
                 this.setState({
                     front: <AdminPanel/>
