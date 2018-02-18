@@ -1,14 +1,23 @@
 import React from 'react';
-import { provider, auth } from '../Constants/database';
+import firebase, { provider, auth } from '../Constants/database';
 import { Link } from 'react-router-dom';
 import './Login.css';
 
 
 class Login extends React.Component{
+    constructor(){
+        super();
+        this.usersPath = firebase.database().ref('users');
+    }
+    
     componentWillMount(){
      this.authListener = auth.onAuthStateChanged(user => {
             if(user){
-                this.props.history.goBack();
+              this.usersPath.child(user.uid).push({
+                  email: user.email,
+                  role: 'Member'
+              })
+            this.props.history.goBack();
             } 
          })
     }
