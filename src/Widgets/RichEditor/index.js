@@ -10,10 +10,9 @@ class RichEditor extends React.Component {
         super();
         this.userUID = auth.currentUser;
         this.postStorage = firebase.database().ref("forum-posts");
-        this.userPostsStorage = firebase.database().ref("users");
         this.state = { 
             text: '' ,
-        } // You can also pass a Quill Delta here
+        } 
     }
 
     componentDidMount(){
@@ -28,23 +27,22 @@ class RichEditor extends React.Component {
     
      submitNewThread = (e) => {
         e.preventDefault();
-        const week = ['Saturday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-        const { text } = this.state;
-        const cat = document.querySelector('input[name="match"]:checked');
-        const catID = cat.id;
-        const title = e.target.title.value
-        const content = text;
-        const dateToday = new Date(),
+        let { text } = this.state;
+        let title = e.target.title.value
+        let content = text;
+        const WEKK = ['Saturday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        const CATEGORY = document.querySelector('input[name="match"]:checked');
+        const CATEGORY_ID = CATEGORY.id;
+        const DATE_TODAY = new Date(),
         locale = 'en-us'
-        const dateFormat = `${dateToday.toLocaleString(locale, {month: "long"})} ${dateToday.getDate()} ${dateToday.getFullYear()} ${dateToday.toLocaleTimeString()}`
-        this.postStorage.push({
+        this.postStorage.child(this.userUID).set({
             post_by: this.userUID.displayName,
             post_user_photoURL: this.userUID.photoURL,
-            post_format_date: dateToday.toLocaleDateString(),
-            post_date: dateToday.getTime(),
+            post_format_date: DATE_TODAY.toLocaleDateString(),
+            post_date: DATE_TODAY.getTime(),
             post_title: title,
             post_content: text,
-            post_category: cat.value,
+            post_category: CATEGORY.value,
         }).then(snap => {
             const { match , history } = this.props;
             history.goBack();
