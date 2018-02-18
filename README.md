@@ -40,4 +40,14 @@ Current Progress Demo: https://dodge-950cd.firebaseapp.com/
 3. Run `firebase deploy` to deploy your app. Check your app `<YOUR-FIREBASE-APP>.firebaseapp.com`
 
 
+#### Deploying rules
+
+1. Go to rules.json and modify it as you want,\
+2. On your command line enter `firebase deploy --only database` this will update/push your rules.
+
 DodgePH isn’t endorsed by Riot Games and doesn’t reflect the views or opinions of Riot Games or anyone officially involved in producing or managing League of Legends. League of Legends and Riot Games are trademarks or registered trademarks of Riot Games, Inc. League of Legends © Riot Games, Inc.
+
+
+#### License
+
+** MIT **
