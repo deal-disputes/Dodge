@@ -32,13 +32,6 @@ class Thread extends React.Component{
         
         this.postStorage.child(t + "/reactions/").on('value', snap => {
             const val = snap.val() !== null ? Object.values(snap.val()) : null;
-            // const val = Object.values(snap.val())
-            // this.postStorage.child(t + "/reactions/").push({
-            //         from: user.displayName,
-            //         fromUID: user.uid,
-            //         reactionID: reactionType
-            //  })
-            console.log(val)
             if(val && val.find(sp => sp.fromUID == this.props.user.uid)){
                 console.log('already exists')
             } else {
